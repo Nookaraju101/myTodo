@@ -6,7 +6,8 @@ import { Update } from "../Actions/TodoAction";
 function TodoListComponent() {
     return (
         <div className="contianer col-6">
-            <h2>todoList</h2>test
+            <h2>todoList</h2>
+            <p>todoitems</p>
             <div className="card border-success mb-3">
                 <div className="card-header bg-transparent border-success"></div>
                 <div className="card-body text-success">
