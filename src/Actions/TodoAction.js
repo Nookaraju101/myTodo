@@ -1,5 +1,6 @@
 
 export const AddAction = (data) => async dispatch => {
+    console.log(data);
     dispatch({
         type: "Add",
         payload: data

@@ -1,39 +1,24 @@
 import './App.css';
 import React from 'react';
 import ReactDOM from 'react';
-import { AddAction } from './Actions/TodoAction';
-import { connect} from 'react-redux';
+import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
 import TodoListComponent from './Todo/TodoListComponent';
-import AddTodoComponent from './Todo/AddTodoComponent';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AddTodoComponent from "./Todo/AddTodoComponent";
+import { Link } from "react-router-dom";
+import { DashBoardComponent } from './Todo/DashBoardComponent';
 
-function App () {
+function App() {
   return (
     <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-  
-
-      
-      {/* <TodoListComponent/> */}
-
+      < DashBoardComponent />
       <Routes>
-        <Route path="/" element={< TodoListComponent/>} />
-        <Route path="addtodo" element={< AddTodoComponent/>} />
+        <Route
+          path="/"
+          element={<Navigate to="/list" replace />}
+        />
+        <Route path="/list" element={< TodoListComponent />} />
+        <Route path="/addtodo" element={< AddTodoComponent />} />
       </Routes>
-
     </div>
   );
 }
