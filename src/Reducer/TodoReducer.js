@@ -1,14 +1,18 @@
 
-const todoList = [];
+const initialState = {
+todoList: []
+}
 
-export default function reducer (state = todoList, action ) {
+export default function reducer (state = initialState, action) {
 
     switch(action.type) {
         case "Add":
-            const list = state.todoList;
+            let list = state?.todoList;
             if (action?.payload) {
-                list.push(action.payload);
+                action.payload.id = list.length + 1;
+                list = [...list, action.payload];
             }
+            
             return {
                 ...state,
                 todoList: list
