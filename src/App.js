@@ -1,10 +1,8 @@
 import './App.css';
 import React from 'react';
-import ReactDOM from 'react';
-import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import TodoListComponent from './Todo/TodoListComponent';
 import AddTodoComponent from "./Todo/AddTodoComponent";
-import { Link } from "react-router-dom";
 import { DashBoardComponent } from './Todo/DashBoardComponent';
 
 function App() {

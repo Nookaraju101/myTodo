@@ -6,13 +6,16 @@ export const AddAction = (data) => async dispatch => {
         payload: data
     })
 }
-export const Delete = () => async dispatch => {
+export const Update = (data) => async dispatch => {
+    console.log(data);
     dispatch({
-        type: "Delete"
+        type: "Update",
+        payload: data
     })
 }
-export const Update = () => async dispatch => {
+export const Delete = (del) => async dispatch => {
     dispatch({
-        type: "Update"
+        type: "Delete",
+        payload: del
     })
 }

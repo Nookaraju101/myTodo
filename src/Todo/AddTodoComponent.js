@@ -1,16 +1,19 @@
-import React, { Fragment, useState } from "react";
-import { AddAction } from "../Actions/TodoAction";
+import React, { useState } from "react";
+import { AddAction, Update  } from "../Actions/TodoAction";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router";
+import { useNavigate, useLocation } from "react-router";
 
 
 export default function AddTodoComponent() {
-    const [title, setTitle] = useState("");
-    const [desc, setDesc] = useState("");
-    const [state, setState] = useState({ title: '', desc: '' });
+    const location = useLocation();
+
+    const [title, setTitle] = useState(location?.state?.title);
+    const [desc, setDesc] = useState(location?.state?.description);
     const dispatch = useDispatch();
     const navigate = useNavigate();
+  console.log('location', location);
 
+  const isEdit = location.state;
     // const handleChange = (e) => {
     //     const key  = e.target.name;
     //     const value  = e.target.value;
@@ -26,7 +29,11 @@ export default function AddTodoComponent() {
             title: title,
             description: desc
         }
-        dispatch(AddAction(obj))
+        if (isEdit) {
+            obj.id = location.state.id
+        }
+        dispatch( isEdit ? Update(obj) : AddAction(obj))
+        // dispatch(Delete(obj))
         navigate('/list')
     }
 

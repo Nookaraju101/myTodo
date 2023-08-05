@@ -1,11 +1,9 @@
 import React from "react";
 import { Fragment } from "react";
-import {Routes, Route, BrowserRouter } from "react-router-dom";
-import TodoListComponent from "./TodoListComponent";
-import AddTodoComponent from "./AddTodoComponent";
 import { Link } from "react-router-dom";
 
 export function DashBoardComponent() {
+
     return (
         <Fragment>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -27,8 +25,6 @@ export function DashBoardComponent() {
                     </ul>
                 </div>
             </nav>
-            
-
         </Fragment>
     )
 } 
