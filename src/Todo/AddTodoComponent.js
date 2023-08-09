@@ -33,7 +33,6 @@ export default function AddTodoComponent() {
             obj.id = location.state.id
         }
         dispatch( isEdit ? Update(obj) : AddAction(obj))
-        // dispatch(Delete(obj))
         navigate('/list')
     }
 

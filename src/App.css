@@ -44,3 +44,11 @@
   justify-content: center;
   align-items: center;
 }
+.edit {
+  float: left;
+  margin-left: 5px;
+}
+.delete {
+  float: right;
+  margin-right: 5px;
+}
