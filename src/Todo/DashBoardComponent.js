@@ -30,6 +30,7 @@ export function DashBoardComponent() {
                         </li>
                         <li className="nav-item">
                             <a className="nav-link"><Link to="/products">products</Link></a>
+                            <a className="nav-link"><Link to="/items">items</Link></a>
                         </li>
                     </ul>
                 </div>
