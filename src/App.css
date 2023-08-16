@@ -32,23 +32,38 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
+
 .cent {
   margin-left: 25%;
 }
+
 .button {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .edit {
   float: left;
   margin-left: 5px;
 }
+
 .delete {
   float: right;
   margin-right: 5px;
+}
+
+.todo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  word-break: break-all;
+}
+.todo-item {
+  width: 33%;
 }
