@@ -6,7 +6,7 @@ import AddTodoComponent from "./Todo/AddTodoComponent";
 import { DashBoardComponent } from './Todo/DashBoardComponent';
 import axios from 'axios';
 import TrailPostComponent from './TrailComponent';
-
+import AxiosApiCall from './shws';
 
 function App() {
 
@@ -23,6 +23,8 @@ function App() {
         <Route path="/list" element={< TodoListComponent />} />
         <Route path="/addtodo" element={< AddTodoComponent />} />
         <Route path="/post" element={< TrailPostComponent />} />
+        <Route path="/items" element={< AxiosApiCall />} />
+        
       </Routes>
     </div>
   );

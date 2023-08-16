@@ -27,7 +27,7 @@ function AxiosApiCall() {
             })
                 .then((res) => {
                     const rajList = [...posts];
-                    rajList.unshift(rs.data)
+                    rajList.unshift(res.data)
                     setPosts(rajList);
                 });
             e.preventDefault();
